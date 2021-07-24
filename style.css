@@ -10,6 +10,11 @@ body
 {
   overflow-x: hidden;
 }
+body *
+{
+  color: #02222c;
+  font-family: "DejaVu Sans";
+}
 
 /* Background */
 main
@@ -17,6 +22,7 @@ main
   min-height: 100vh;
   background: linear-gradient(to top right, #138cf6, #3f0971);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -45,17 +51,19 @@ main
   filter: blur(0.3rem);
 }
 
-/* Main Background Glass */
-.mainglass *
+/* Notice */
+.notice
 {
-  color: #02222c;
-  font-family: "DejaVu Sans";
+  margin: 1rem;
 }
+
+/* Main Background Glass */
 .mainglass
 {
   min-height: 85vh;
   width: 80%;
   margin: 4rem;
+  margin-bottom: 1rem;
   background: linear-gradient(to top right, rgba(114, 185, 248, 0.7), rgba(81, 218, 245, 0.7));
   box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.5);
   border: 0.1rem solid rgba(255,255,255,0.1);
