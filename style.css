@@ -55,6 +55,7 @@ main
 .notice
 {
   margin: 1rem;
+  font-size: smaller;
 }
 
 /* Main Background Glass */
