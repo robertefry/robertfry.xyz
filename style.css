@@ -13,7 +13,7 @@ body
 body *
 {
   color: #02222c;
-  font-family: "DejaVu Sans";
+  font-family: sans-serif;
 }
 
 /* Background */
@@ -207,6 +207,7 @@ main
   justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-size: small;
   font-weight: bold;
   pointer-events: none;
 }
