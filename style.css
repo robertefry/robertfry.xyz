@@ -9,10 +9,10 @@
 :root
 {
   /* Materials */
-  --color-wallpaper-1:        #253993ff;
-  --color-wallpaper-2:        #440a7bff;
+  --color-wallpaper-1:        #3e1eb3ff;
+  --color-wallpaper-2:        #370a7bff;
   --color-text:               #b0c4deff;
-  --color-slate:              #242424ff;
+  --color-slate:              #262626ff;
   --color-slate-cut:          #484848ff;
   --color-slate-shadow:       #00000080;
   --color-slate-strong:       #4b4b4bff;
@@ -30,7 +30,7 @@
   --border-slate-neon: 0.13rem solid var(--color-slate-neon);
   --border-glass-neon: 0.1rem solid var(--color-glass-neon);
   --slate-shadow: 0 0.5rem 1rem var(--color-slate-shadow);
-  --slate-neon-shadow: 0 0.5rem 1rem var(--color-slate-neon-shadow);
+  --slate-neon-shadow: 0 0.5rem 0.8rem var(--color-slate-neon-shadow);
   --slate-radius: 0.25rem;
 }
 
