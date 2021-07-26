@@ -101,7 +101,7 @@ body *
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
   border: 0.1rem solid rgba(192,192,192,0.1);
   border-left: 0.1rem solid rgba(192,192,192,0.25);
-  border-top: 0.1rem solid rgba(192,192,192,0.25);
+  border-top: 0.1rem solid rgba(192, 156, 226, 0.25);
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
