@@ -66,18 +66,17 @@ header
   border-top: var(--border-slate-strong);
   border-bottom: var(--border-slate-neon);
   border-radius: var(--slate-radius);
+  border-spacing: 0.5rem 0.5rem;
   overflow: hidden;
   z-index: 0;
 }
 .nav-left
 {
   float: left;
-  border-spacing: 0.5rem 0.5rem;
 }
 .nav-right
 {
   float: right;
-  border-spacing: 0.5rem 0.5rem;
 }
 .navbtn
 {
