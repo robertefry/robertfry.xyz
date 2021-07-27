@@ -5,51 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>Robert Fry</title>
 </head>
 <body>
-  <main class="mainglass">
-    <nav class="navglass">
-      <div class="nav-left">
-        <a class="navbtn" href="index.htm">About Me</a>
-        <a class="navbtn" href="index.htm">Projects</a>
-        <a class="navbtn" href="index.htm">Tutoring</a>
-        <a class="navbtn" href="index.htm">Contacts</a>
-      </div>
-      <div class="nav-right">
-        <a class="navbtn" target="_blank" href="https://github.com/robertefry/robertfry.xyz">Source Code</a>
-      </div>
+  <header>
+    <nav class="nav-left">
+      <a class="navbtn" href="index.htm">About Me</a>
+      <a class="navbtn" href="index.htm">Projects</a>
+      <a class="navbtn" href="index.htm">Tutoring</a>
+      <a class="navbtn" href="index.htm">Contacts</a>
     </nav>
-    <div style="width:100%;">
-      <div class="dashboard">
-        <div class="mugshot">
-          <img class=mugshot_img src="images/mugshot.jpg">
-          <p>Robert Fry</p>
-        </div>
-        <div class="contacts">
-          <button class="contact" onclick="">
-            <img src="images/mail.svg">
-            <p>E-Mail</p>
-          </button>
-          <button class="contact" onclick="window.open('https://github.com/robertefry')">
-            <img src="images/github.svg">
-            <p>GitHub</p>
-          </button>
-          <button class="contact" onclick="window.open('https://steamcommunity.com/id/TheCrazyPhoenix');">
-            <img src="images/steam.svg">
-            <p>Steam</p>
-          </button>
-        </div>
+    <nav class="nav-right">
+      <a class="navbtn" target="_blank" href="https://github.com/robertefry/robertfry.xyz">Source Code</a>
+    </nav>
+  </header>
+  <main>
+    <div class="dashboard">
+      <div class="mugshot">
+        <img class=mugshot-img src="images/mugshot.jpg">
+        <p>Robert Fry</p>
       </div>
-      <div class="content">
-        <h3>About Me</h3>
-        <hr>
-        <p>This website is currently under construction, please be patient.</p>
+      <div class="dashboard-items">
+        <a class="dashboard-button" target="_blank" href="">
+          <img src="images/mail.svg">
+          <p>E-Mail</p>
+        </a>
+        <a class="dashboard-button" target="_blank" href="https://github.com/robertefry">
+          <img src="images/github.svg">
+          <p>GitHub</p>
+        </a>
+        <a class="dashboard-button" target="_blank" href="https://steamcommunity.com/id/TheCrazyPhoenix">
+          <img src="images/game.svg">
+          <p>Steam</p>
+        </a>
       </div>
     </div>
+    <div style="padding-top: 1rem;">
+      <h3>About Me</h3>
+      <hr>
+      <p>This website is currently under construction, please be patient.</p>
+    </div>
   </main>
-  <div class="notice">
+  <footer>
     This website has been tested in Firefox (90.0) and Chromium (92.0) only.
-  </div>
+  </footer>
 </body>
 </html>
