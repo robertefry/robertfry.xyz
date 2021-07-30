@@ -10,7 +10,7 @@
   <?php include("assets/common/header.htm"); ?>
   <main>
     <?php include("assets/common/dashboard.htm"); ?>
-    <div style="padding-top: 1rem;">
+    <div class="contents">
       <h3>Projects</h3>
       <hr>
       <p>This website is currently under construction, please be patient.</p>
