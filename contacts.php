@@ -53,6 +53,10 @@
     <div class="contents">
       <h3>Contact Me</h3>
       <hr>
+      <div class="orange banner">
+        <p>Email contacts are currently not working.</p>
+        <p>Please be patient while I configure my email server.</p>
+      </div>
       <form class="contact-form" action="contacts.php" method="POST">
         <div class="contact-form-field">
           <label for="contact-name" class="contact-form-label">Your Name</label>
@@ -78,7 +82,7 @@
           <button class="button-glass" type="contact-submit">Submit</button>
         </div>
         <?php if($message_sent): ?>
-          <div class="banner-green collapse-up">Your message has been sent!</div>
+          <div class="green banner collapse-up">Your message has been sent!</div>
         <?php endif; ?>
       </form>
     </div>

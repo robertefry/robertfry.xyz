@@ -24,6 +24,7 @@
   --color-glass-neon-weak:    #570d9c80;
   --color-glass-neon-faint:   #8313ec1a;
   --color-banner-green:       #3c8820ff;
+  --color-banner-orange:      #ba7f12ff;
   --color-banner-red:         #882020ff;
 
   /* Variables */
@@ -49,24 +50,24 @@
 }
 
 /* Banners */
-.banner-green
+.green
 {
-  width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
   background: var(--color-banner-green);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.banner-red
+.orange
+{
+  background: var(--color-banner-orange);
+}
+.red
+{
+  background: var(--color-banner-red);
+}
+.banner
 {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: var(--color-banner-red);
   display: flex;
   flex-direction: column;
   align-items: center;
