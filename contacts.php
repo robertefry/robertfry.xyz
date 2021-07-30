@@ -59,22 +59,22 @@
       </div>
       <form class="contact-form" action="contacts.php" method="POST">
         <div class="contact-form-field">
-          <label for="contact-name" class="contact-form-label">Your Name</label>
+          <label for="contact-name" class="contact-form-label input-required">Your Name</label>
           <input type="text" class="contact-form-input" id="contact-name"
             name="contact-name" placeholder="Your Name" required>
         </div>
         <div class="contact-form-field">
-          <label for="contact-address" class="contact-form-label">Your Email</label>
+          <label for="contact-address" class="contact-form-label input-required">Your Email</label>
           <input type="email" class="contact-form-input" id="contact-email"
             name="contact-address" placeholder="Your Email" required>
         </div>
         <div class="contact-form-field">
-          <label for="contact-subject" class="contact-form-label">Subject</label>
+          <label for="contact-subject" class="contact-form-label input-required">Subject</label>
           <input type="text" class="contact-form-input" id="contact-subject"
             name="contact-subject" placeholder="Subject" required>
         </div>
         <div class="contact-form-field">
-          <label for="contact-message" class="contact-form-label">Message</label>
+          <label for="contact-message" class="contact-form-label input-required">Message</label>
           <textarea name="contact-message" class="contact-form-message" id="contact-message"
             cols="30" rows="10" placeholder="Enter your message..."></textarea>
         </div>

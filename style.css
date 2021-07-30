@@ -8,10 +8,12 @@
 
 :root
 {
+
   /* Materials */
   --color-wallpaper-1:        #3e1eb3ff;
   --color-wallpaper-2:        #370a7bff;
   --color-text:               #b0c4deff;
+  --color-text-red:           #911818ff;
   --color-slate:              #262626ff;
   --color-slate-cut:          #4b5158ff;
   --color-slate-shadow:       #00000080;
@@ -36,6 +38,13 @@
   --slate-shadow: 0 0.5rem 1rem var(--color-slate-shadow);
   --slate-neon-shadow: 0 0.5rem 0.8rem var(--color-slate-neon-shadow);
   --slate-radius: 0.25rem;
+}
+
+/* Text formatting */
+.input-required:after
+{
+  content: "*";
+  color: var(--color-text-red);
 }
 
 /* Animation */
