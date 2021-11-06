@@ -10,8 +10,8 @@
 {
 
   /* Materials */
-  --color-wallpaper-1:        #3e1eb3ff;
-  --color-wallpaper-2:        #370a7bff;
+  --color-wallpaper-1:        #5011b6ff;
+  --color-wallpaper-2:        #510a7bff;
   --color-text:               #b0c4deff;
   --color-text-red:           #911818ff;
   --color-slate:              #262626ff;
@@ -19,8 +19,8 @@
   --color-slate-shadow:       #00000080;
   --color-slate-strong:       #4b4b4bff;
   --color-slate-weak:         #343434ff;
-  --color-slate-neon:         #440a7bff;
-  --color-slate-neon-shadow:  #440a7b80;
+  --color-slate-neon:         #4e0a7bff;
+  --color-slate-neon-shadow:  #4d068f80;
   --color-glass:              #ffffff08;
   --color-glass-neon:         #440a7bcc;
   --color-glass-neon-weak:    #570d9c80;
@@ -132,7 +132,7 @@ body
 
   min-height: 100vh;
   padding: 2rem;
-  background: var(--material-background);
+  background-image: url("assets/images/pattern.png"), var(--material-background);
   display: flex;
   flex-direction: column;
   align-items: center;
