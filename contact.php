@@ -52,7 +52,7 @@
     <div class="contents">
       <h3>Contact Me</h3>
       <hr>
-      <form class="contact-form" action="contacts.php" method="POST">
+      <form class="contact-form" action="contact.php" method="POST">
         <div class="contact-form-field">
           <label for="contact-name" class="contact-form-label input-required">Your Name</label>
           <input type="text" class="contact-form-input" id="contact-name"
