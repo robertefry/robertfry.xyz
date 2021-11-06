@@ -26,14 +26,13 @@
 
   if ($all_valid && !$message_sent)
   {
-    $address = "robert.e.fry@protonmail.com";
+    $address = "inbox@robertfry.xyz";
     $subject = "New message from robertfry.xyz";
     $message = "";
 
+    $message .= "Sender: ".$contact_name." (".$contact_address.")\r\n";
     $message .= "Subject: ".$contact_subject."\r\n";
-    $message .= "From: ".$contact_name."\r\n";
-    $message .= "Email: ".$contact_email."\r\n";
-    $message .= "\r\n".$contact_message;
+    $message .= "\r\n".$contact_message."\r\n";
 
     mail($address,$subject,$message);
     $message_sent = true;
@@ -53,10 +52,6 @@
     <div class="contents">
       <h3>Contact Me</h3>
       <hr>
-      <div class="orange banner">
-        <p>Email contacts are currently not working.</p>
-        <p>Please be patient while I configure my email server.</p>
-      </div>
       <form class="contact-form" action="contacts.php" method="POST">
         <div class="contact-form-field">
           <label for="contact-name" class="contact-form-label input-required">Your Name</label>
