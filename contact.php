@@ -26,7 +26,7 @@
 
   if ($all_valid && !$message_sent)
   {
-    $address = "inbox@robertfry.xyz";
+    $address = "contact@robertfry.xyz";
     $subject = "New message from robertfry.xyz";
     $message = "";
 
