@@ -97,9 +97,9 @@
   background: var(--material-background);
   background-size: 400%;
   background-position: right;
-  border: var(--border-slate-strong);
-  border-top: var(--border-slate-weak);
-  border-left: var(--border-slate-weak);
+  border: var(--border-slate-weak);
+  border-bottom: var(--border-slate-strong);
+  border-right: var(--border-slate-strong);
   border-radius: var(--slate-radius);
   display: flex;
   flex-direction: row;
