@@ -61,11 +61,14 @@ main,header,.dashboard
 /* Material Glass */
 input,textarea,.button-glass
 {
-  background: var(--color-glass);
   border: var(--border-slate-weak);
   border-bottom: var(--border-slate-strong);
   border-right: var(--border-slate-strong);
   border-radius: var(--slate-radius);
+}
+input,textarea
+{
+  background: var(--color-glass);
 }
 
 /* ************************************************************************** */
