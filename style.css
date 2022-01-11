@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+/* ************************************************************************** */
+/*  CSS ROOT  */
+/* ************************************************************************** */
+
 :root
 {
   /* Colours */
@@ -39,14 +43,10 @@
   --slate-radius: 0.25rem;
 }
 
-/* Text formatting */
-.input-required:after
-{
-  content: "*";
-  color: var(--color-text-red);
-}
+/* ************************************************************************** */
+/*  ANIMATION  */
+/* ************************************************************************** */
 
-/* Animation */
 @keyframes collapse-up
 {
   to { height: 0; margin: 0; padding: 0; overflow: hidden; }
@@ -57,20 +57,23 @@
   animation-fill-mode: forwards;
 }
 
-/* Banners */
-.green
+/* ************************************************************************** */
+/*  BANNERS  */
+/* ************************************************************************** */
+
+.banner-green
 {
   background: var(--color-banner-green);
 }
-.orange
+.banner-orange
 {
   background: var(--color-banner-orange);
 }
-.red
+.banner-red
 {
   background: var(--color-banner-red);
 }
-.banner
+.banner-green,.banner-orange,.banner-red
 {
   width: 100%;
   margin-top: 1rem;
@@ -81,7 +84,10 @@
   align-items: center;
 }
 
-/* Glass Button */
+/* ************************************************************************** */
+/*  INTERACTIVE COMPONENTS  */
+/* ************************************************************************** */
+
 .button-glass
 {
   --material-background: linear-gradient(to right,
@@ -117,12 +123,15 @@
   border: var(--border-glass-neon);
 }
 
-/* Message of the day */
-.motd
+.input-required:after
 {
-  text-align: center;
-  margin-bottom: 1em;
+  content: "*";
+  color: var(--color-text-red);
 }
+
+/* ************************************************************************** */
+/*  CSS BODY COMPONENTS  */
+/* ************************************************************************** */
 
 body
 {
@@ -188,7 +197,6 @@ footer
   text-align: center;
 }
 
-/* Main Content */
 main
 {
   --min-height: calc((100vh - 4rem) - (1.5rem));
@@ -218,7 +226,10 @@ main hr
   overflow: hidden;
 }
 
-/* Dashboard */
+/* ************************************************************************** */
+/*  DASHBOARD  */
+/* ************************************************************************** */
+
 .dashboard
 {
   width: 20rem;
@@ -262,7 +273,6 @@ main hr
   height: 100%;
 }
 
-/* Mugshot */
 .mugshot
 {
   padding: 0.5rem;
@@ -280,7 +290,10 @@ main hr
   border-radius: 50%;
 }
 
-/* Contact Form */
+/* ************************************************************************** */
+/*  CONTACT FORM  */
+/* ************************************************************************** */
+
 .contact-form
 {
   margin: 1rem;
