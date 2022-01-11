@@ -77,7 +77,7 @@
           <button class="button-glass" type="contact-submit">Submit</button>
         </div>
         <?php if($message_sent): ?>
-          <div class="green banner collapse-up">Your message has been sent!</div>
+          <div class="banner-green collapse-up">Your message has been sent!</div>
         <?php endif; ?>
       </form>
     </div>
