@@ -9,8 +9,6 @@
 <body>
   <?php include("assets/common/header.htm"); ?>
   <main>
-    <!-- <div class="motd">
-    </div> -->
     <?php include("assets/common/dashboard.htm"); ?>
     <div class="contents">
       <h3>About Me</h3>
