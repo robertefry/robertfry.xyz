@@ -88,6 +88,23 @@
 /*  INTERACTIVE COMPONENTS  */
 /* ************************************************************************** */
 
+input,textarea
+{
+  border: none;
+  padding: 0.5rem;
+  background: var(--color-glass);
+  border: var(--border-slate-strong);
+  border-top: var(--border-slate-weak);
+  border-left: var(--border-slate-weak);
+  border-radius: var(--slate-radius);
+  outline: none;
+}
+input:focus,textarea:focus
+{
+  border: var(--border-glass-neon);
+  border-width: 2px;
+}
+
 .button-glass
 {
   --material-background: linear-gradient(to right,
@@ -303,40 +320,24 @@ main hr
   align-items: center;
   float: left;
 }
-.contact-form-field
+.contact-form .form-field
 {
   width: 30rem;
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
 }
-.contact-form-label
+.contact-form .form-field label
 {
   padding-bottom: 0.25rem;
   padding-left: 2px;
 }
-.contact-form-input
+.contact-form .form-field input
 {
   height: 1.5rem;
 }
-.contact-form-message
+.contact-form .form-field textarea
 {
   height: 15rem;
   resize: none;
-}
-.contact-form-input,.contact-form-message
-{
-  border: none;
-  padding: 0.5rem;
-  background: var(--color-glass);
-  border: var(--border-slate-strong);
-  border-top: var(--border-slate-weak);
-  border-left: var(--border-slate-weak);
-  border-radius: var(--slate-radius);
-  outline: none;
-}
-.contact-form-input:focus,.contact-form-message:focus
-{
-  border: var(--border-glass-neon);
-  border-width: 2px;
 }

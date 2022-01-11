@@ -53,24 +53,24 @@
       <h3>Contact Me</h3>
       <hr>
       <form class="contact-form" action="contact.php" method="POST">
-        <div class="contact-form-field">
-          <label for="contact-name" class="contact-form-label input-required">Your Name</label>
-          <input type="text" class="contact-form-input" id="contact-name"
+        <div class="form-field">
+          <label for="contact-name" class="input-required">Your Name</label>
+          <input type="text" id="contact-name"
             name="contact-name" placeholder="Your Name" required>
         </div>
-        <div class="contact-form-field">
-          <label for="contact-address" class="contact-form-label input-required">Your Email</label>
-          <input type="email" class="contact-form-input" id="contact-email"
+        <div class="form-field">
+          <label for="contact-address" class="input-required">Your Email</label>
+          <input type="email" id="contact-email"
             name="contact-address" placeholder="Your Email" required>
         </div>
-        <div class="contact-form-field">
-          <label for="contact-subject" class="contact-form-label input-required">Subject</label>
-          <input type="text" class="contact-form-input" id="contact-subject"
+        <div class="form-field">
+          <label for="contact-subject" class="input-required">Subject</label>
+          <input type="text" id="contact-subject"
             name="contact-subject" placeholder="Subject" required>
         </div>
-        <div class="contact-form-field">
-          <label for="contact-message" class="contact-form-label input-required">Message</label>
-          <textarea name="contact-message" class="contact-form-message" id="contact-message"
+        <div class="form-field">
+          <label for="contact-message" class="input-required">Message</label>
+          <textarea name="contact-message" id="contact-message"
             cols="30" rows="10" placeholder="Enter your message..."></textarea>
         </div>
         <div>
