@@ -27,14 +27,13 @@
   if ($all_valid && !$message_sent)
   {
     $address = "contact@robertfry.xyz";
-    $subject = "New message from robertfry.xyz";
-    $message = "";
+    $subject = "".$contact_subject;
+    $message = "".$contact_message;
 
-    $message .= "Sender: ".$contact_name." (".$contact_address.")\r\n";
-    $message .= "Subject: ".$contact_subject."\r\n";
-    $message .= "\r\n".$contact_message."\r\n";
+    $header_from = "".$contact_name." <".$contact_address.">";
+    $headers = array('From'=>$header_from);
 
-    mail($address,$subject,$message);
+    mail($address,$subject,$message,$headers);
     $message_sent = true;
   }
 ?>
