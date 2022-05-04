@@ -3,10 +3,10 @@
 <?php
   $message_sent = false;
 
-  $contact_name = filter_var($_POST['contact-name'],FILTER_SANITIZE_STRING);
-  $contact_address = filter_var($_POST['contact-address'],FILTER_SANITIZE_EMAIL);
-  $contact_subject = filter_var($_POST['contact-subject'],FILTER_SANITIZE_STRING);
-  $contact_message = filter_var($_POST['contact-message'],FILTER_SANITIZE_STRING);
+  $form_name = filter_var($_POST['form-name'],FILTER_SANITIZE_STRING);
+  $form_addr = filter_var($_POST['form-addr'],FILTER_SANITIZE_EMAIL);
+  $form_subj = filter_var($_POST['form-subj'],FILTER_SANITIZE_STRING);
+  $form_mesg = filter_var($_POST['form-mesg'],FILTER_SANITIZE_STRING);
 
   function is_valid($string)
   {
@@ -17,20 +17,19 @@
   {
     return is_valid($string) && filter_var($string,FILTER_VALIDATE_EMAIL);
   }
-
   $all_valid = true;
-  $all_valid &= is_valid($contact_name);
-  $all_valid &= is_email($contact_address);
-  $all_valid &= is_valid($contact_subject);
-  $all_valid &= is_valid($contact_message);
+  $all_valid &= is_valid($form_name);
+  $all_valid &= is_email($form_addr);
+  $all_valid &= is_valid($form_subj);
+  $all_valid &= is_valid($form_mesg);
 
   if ($all_valid && !$message_sent)
   {
     $address = "contact@robertfry.xyz";
-    $subject = "".$contact_subject;
-    $message = "".$contact_message;
+    $subject = "".$form_subj;
+    $message = "".$form_mesg;
 
-    $header_from = "".$contact_name." <".$contact_address.">";
+    $header_from = "".$form_name." <".$form_addr.">";
     $headers = array('From'=>$header_from);
 
     mail($address,$subject,$message,$headers);
@@ -53,24 +52,21 @@
       <hr>
       <form class="contact-form" action="contact.php" method="POST">
         <div class="form-field">
-          <label for="contact-name" class="input-required">Your Name</label>
-          <input type="text" id="contact-name"
-            name="contact-name" placeholder="Your Name" required>
+          <label for="form-name" class="input-required">Your Name</label>
+          <input name="form-name" type="text" placeholder="Your Name" required>
         </div>
         <div class="form-field">
-          <label for="contact-address" class="input-required">Your Email</label>
-          <input type="email" id="contact-email"
-            name="contact-address" placeholder="Your Email" required>
+          <label for="form-addr" class="input-required">Your Email Address</label>
+          <input name="form-addr" type="email" placeholder="Your Email Address" required>
         </div>
         <div class="form-field">
-          <label for="contact-subject" class="input-required">Subject</label>
-          <input type="text" id="contact-subject"
-            name="contact-subject" placeholder="Subject" required>
+          <label for="form-subj" class="input-required">Message Subject</label>
+          <input name="form-subj" type="text" placeholder="Message Subject" required>
         </div>
         <div class="form-field">
-          <label for="contact-message" class="input-required">Message</label>
-          <textarea name="contact-message" id="contact-message"
-            cols="30" rows="10" placeholder="Enter your message..."></textarea>
+          <label for="form-mesg" class="input-required">Message</label>
+          <textarea name="form-mesg" type="text" placeholder="Enter your message here..."
+            cols="30" rows="10"></textarea>
         </div>
         <div>
           <button class="button-glass" type="contact-submit">Submit</button>
