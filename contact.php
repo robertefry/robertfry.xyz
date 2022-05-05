@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 
 <?php
+  require "/usr/share/php/libphp-phpmailer/src/PHPMailer.php";
+  require "/usr/share/php/libphp-phpmailer/src/Exception.php";
+  require "/usr/share/php/libphp-phpmailer/src/SMTP.php";
+
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  use PHPMailer\PHPMailer\SMTP;
+
+  $state_str = "";
 
   if (isset($_POST['form-submit']))
   {
     unset($_POST['form-submit']);
 
+    // Form fields
     $form_name = filter_var($_POST['form-name'],FILTER_SANITIZE_STRING);
     $form_addr = filter_var($_POST['form-addr'],FILTER_SANITIZE_EMAIL);
     $form_subj = filter_var($_POST['form-subj'],FILTER_SANITIZE_STRING);
     $form_mesg = filter_var($_POST['form-mesg'],FILTER_SANITIZE_STRING);
 
-    $address = "contact@robertfry.xyz";
-    $subject = "".$form_subj;
-    $message = "".$form_mesg;
+    $mail = new PHPMailer();
 
-    $header_from = "".$form_name." <".$form_addr.">";
-    $headers = array('From'=>$header_from);
+    // Mail headers
+    $mail->addAddress("contact@robertfry.xyz");
+    $mail->setFrom($form_addr,"Contact Form: ".$form_name);
+    $mail->addReplyTo($form_addr,$form_name);
 
-    mail($address,$subject,$message,$headers);
-    $message_sent = true;
+    // Mail contents
+    $mail->isHTML(false);
+    $mail->Subject = $form_subj;
+    $mail->Body    = $form_mesg;
+
+    // Sent Mail
+    $form_sent = false;
+    try {
+      $form_sent = $mail->send();
+    } catch (Exception $e) {
+      error_log($mail->ErrorInfo);
+    }
+    if (!$form_sent) {
+      $state_str = "Sorry, something went wrong. Please try again later.";
+    } else {
+      $state_str = "Message sent! Thanks for contacting me.";
+    }
   }
 ?>
 
