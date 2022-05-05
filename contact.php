@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 
 <?php
-  $message_sent = false;
 
-  $form_name = filter_var($_POST['form-name'],FILTER_SANITIZE_STRING);
-  $form_addr = filter_var($_POST['form-addr'],FILTER_SANITIZE_EMAIL);
-  $form_subj = filter_var($_POST['form-subj'],FILTER_SANITIZE_STRING);
-  $form_mesg = filter_var($_POST['form-mesg'],FILTER_SANITIZE_STRING);
+  if (isset($_POST['form-submit']))
+  {
+    unset($_POST['form-submit']);
 
-  function is_valid($string)
-  {
-    $valid = isset($string) && $string != "";
-    return $valid;
-  }
-  function is_email($string)
-  {
-    return is_valid($string) && filter_var($string,FILTER_VALIDATE_EMAIL);
-  }
-  $all_valid = true;
-  $all_valid &= is_valid($form_name);
-  $all_valid &= is_email($form_addr);
-  $all_valid &= is_valid($form_subj);
-  $all_valid &= is_valid($form_mesg);
+    $form_name = filter_var($_POST['form-name'],FILTER_SANITIZE_STRING);
+    $form_addr = filter_var($_POST['form-addr'],FILTER_SANITIZE_EMAIL);
+    $form_subj = filter_var($_POST['form-subj'],FILTER_SANITIZE_STRING);
+    $form_mesg = filter_var($_POST['form-mesg'],FILTER_SANITIZE_STRING);
 
-  if ($all_valid && !$message_sent)
-  {
     $address = "contact@robertfry.xyz";
     $subject = "".$form_subj;
     $message = "".$form_mesg;
@@ -69,11 +55,11 @@
             cols="30" rows="10"></textarea>
         </div>
         <div>
-          <button class="button-glass" type="contact-submit">Submit</button>
+          <input type="submit" class="button-glass" name="form-submit" value="Submit">
         </div>
-        <?php if($message_sent): ?>
+        <!-- <?php if($message_sent): ?>
           <div class="banner-green collapse-up">Your message has been sent!</div>
-        <?php endif; ?>
+        <?php endif; ?> -->
       </form>
     </div>
   </main>
